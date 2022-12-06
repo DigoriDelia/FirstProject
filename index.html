@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TEHNICI DE PROGRAMARE</title>
+        
+    </head>
+
+    <body>
+        <style>
+            body{
+                color: #FFE9D1;
+                text-align: center;
+                background: rgb(19,21,107);
+                background: linear-gradient(135deg, rgba(19,21,107,1) 0%, rgba(53,16,122,1) 28%, rgba(87,56,131,1) 94%);
+            }
+            .chenar{
+                border: 2px #ceb92c solid;
+                padding: 8px;
+                
+            }
+            fieldset{
+                border: 5px #ceb92c solid;
+                margin-bottom: 15px;
+            }
+            .autor{
+                font-family: Cursive ;
+                display:inline;
+            }
+            #autor{
+                font-family: 'Lucida Handwriting';
+                display:inline;
+            }
+            .song{
+                position: fixed;
+            }
+            .song :not(:hover){
+                opacity: .1;
+            }
+            img{
+                height: 25vh;
+            }
+            .input{
+                display: flex;
+                justify-content: right;
+                height: 25px;
+            }
+            input{
+                width: 20vw;
+                max-width: 25vw;
+            }
+            .metode{
+                display: flex;
+                flex-direction: row;   
+            }
+            .met1{
+                flex-basis: 33%;
+            }
+            .met2{
+                flex-basis: 33%;
+            }
+            .met3{
+                flex-basis: 33%;
+            }
+            .description{
+                visibility: hidden;
+                position: relative;
+                font-size: 25px;
+                opacity: 0;
+                transition: 1s ease-in-out;               
+            }
+            .met1:hover .description{
+                visibility: visible;
+                position: inherit; 
+                opacity: 1;              
+            }
+            .met2:hover .description{
+                visibility: visible;
+                position: inherit;
+                opacity: 1; 
+            }
+            .met3:hover .description{
+                visibility: visible;
+                position: inherit;
+                opacity: 1; 
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+            .met1 div{
+                transition:all 2s ease;
+            }
+            .metode h2{
+                font-family: Papyrus;
+                font-size: 2em;
+            }
+
+
+        </style>
+        <div class="chenar">
+            
+            <fieldset><legend><a href="index.html"><h1>TEHNICI DE PROGRAMARE</h1></a></legend>
+
+            <div class="input">
+                <input type="text" placeholder="Cauta">
+            </div><br>
+            
+            <div id="logo">
+                <a href="https://ro.m.wikipedia.org/wiki/C%2B%2B"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++"></a>
+            </div>
+
+            <div class="song">
+                <audio controls>
+                    <source src="song.mp3" type="audio/mpeg">
+                    </audio>
+            </div>
+
+            <div class="descrip"><h2>C++ (pronunțat „C plus plus”) este un limbaj de programare de uz general de nivel înalt creat de informaticianul danez Bjarne Stroustrup ca o extensie a limbajului de programare C sau „C cu clase”. Limbajul s-a extins semnificativ de-a lungul timpului, iar C++ modern are acum caracteristici orientate pe obiecte, generice și funcționale, pe lângă facilități pentru manipularea memoriei la nivel scăzut. Este aproape întotdeauna implementat ca un limbaj compilat, iar mulți furnizori oferă compilatoare C++, inclusiv Free Software Foundation, LLVM, Microsoft, Intel, Embarcadero, Oracle și IBM, deci este disponibil pe multe platforme.</h2></div>
+
+            
+            <div class="metode">  
+                <div class="met1">
+                    <div><a href="t1.html" target="_blank"><h2>Metoda Greedy</h2></a></div>
+                    <span class="description">Este o metodă generală de elaborare a algoritmilor. În esenţă ea se aplică problemelor în care se dă o mulţime A conţinând n date de intrare cerându-se să se determine o submulţime B a sa care să îndeplinească anumite condiţii pentru a fi acceptată</span>
+                </div>
+                <div class="met2">
+                    <div><a href="t2.html" target="_blank"><h2>Metoda Trierii</h2></a></div>
+                    <span class="description">Se numeşte metoda trierii o metodă ce indentifică toate soluţiile unei probleme în dependenţă de mulţimea soluţiilor posibile</span>
+                </div>
+                <div class="met3">
+                    <div><a href="t3.html" target="_blank"><h2>Metoda Backtracking</h2></a></div>
+                    <span class="description">Backtracking este numele unui algoritm general de descoperire a tuturor soluțiilor unei probleme de calcul, algoritm ce se bazează pe construirea incrementală de soluții-candidat, abandonând fiecare candidat parțial imediat ce devine clar că acesta nu are șanse să devină o soluție validă</span>
+                </div>
+            </div> 
+            
+            <p><h3 class="autor">Realizat de </h3><h3 id="autor">D.Delia</h3></p>
+            
+        </div>
+        <link rel="stylesheet" href="css.css">
+    </body>
+
+</html>

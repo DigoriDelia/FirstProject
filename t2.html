@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TEHNICI DE PROGRAMARE</title>
+        
+    </head>
+
+    <body>
+        <style>
+            body{
+                color: #FFE9D1;
+                text-align: center;
+                background: rgb(19,21,107);
+                background: linear-gradient(135deg, rgba(19,21,107,1) 0%, rgba(53,16,122,1) 28%, rgba(87,56,131,1) 94%);
+            }
+            .chenar{
+                border: 2px #ceb92c solid;
+                padding: 8px;
+                
+            }
+            fieldset{
+                border: 5px #ceb92c solid;
+                margin-bottom: 15px;
+            }
+            .autor{
+                font-family: Cursive ;
+                display:inline;
+            }
+            #autor{
+                font-family: 'Lucida Handwriting';
+                display:inline;
+            }
+            .song{
+                position: fixed;
+            }
+            .song :not(:hover){
+                opacity: .1;
+            }
+            img{
+                height: 25vh;
+            }
+            .input{
+                display: flex;
+                justify-content: right;
+                height: 25px;
+            }
+            input{
+                width: 20vw;
+                max-width: 25vw;
+            }
+            .metode{
+                display: flex;
+                flex-direction: row;
+                
+            }
+            .met1{
+                flex-basis: 33%;
+
+            }
+            .met2{
+                flex-basis: 33%;
+
+            }
+            .met3{
+                flex-basis: 33%;
+            }
+            .description{
+                visibility: hidden;
+                position: relative;
+                font-size: 25px;
+                opacity: 0;
+                transition: 1s ease-in-out;
+                
+            }
+            .met1:hover .description{
+                visibility: visible;
+                position: inherit; 
+                opacity: 1;              
+            }
+            .met2:hover .description{
+                visibility: visible;
+                position: inherit;
+                opacity: 1; 
+            }
+            .met3:hover .description{
+                visibility: visible;
+                position: inherit;
+                opacity: 1; 
+            }
+            legend,#logo,.metode a{
+                text-decoration: none;
+                color: #fff;
+            }
+            legend a{
+                text-decoration: none;
+                color: #fff;
+            }
+            .met1 div{
+                transition:all 2s ease;
+            }
+            .metode h2{
+                font-family: Papyrus;
+                font-size: 2em;
+            }
+            .tehnica{
+                font-size: 3.5em;
+                font-family: Papyrus;
+            }
+            .tehDesc{
+                font-size: 1.5em;
+                text-align: left;
+            }
+            li{
+                text-align: none;
+                list-style-type: none;
+            }
+            .textar{
+                border-radius: 10px;
+                background-color: #dbdddd;
+                font-size: .9em;
+            }
+            button{
+                position: absolute;
+                border-radius: 5px;
+                background-color: #dbdddd;
+                font-size: 1em;
+                text-align: center;
+                margin-left: 10px;
+            }
+            #list{
+                list-style-type: none;
+                display: inline-block;
+            }
+            #list li a{
+                text-decoration: none;
+                color: black;
+            }
+
+
+        </style>
+        <div class="chenar">
+            
+            <fieldset><legend><a href="index.html"><h1>TEHNICI DE PROGRAMARE</h1></a></legend>
+            
+            <div class="input">
+                <input type="text" placeholder="Cauta">
+            </div><br>
+
+            <div id="logo">
+                <a href="https://ro.m.wikipedia.org/wiki/C%2B%2B"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++"></a>
+            </div>
+
+            <div class="song">
+                <audio controls>
+                    <source src="song.mp3" type="audio/mpeg">
+                    </audio>
+            </div>
+
+            <p class="tehnica">Metoda Trierii</p>
+
+            <div class="tehDesc">
+                <p><b>Se numeşte metoda trierii o metodă ce indentifică toate soluţiile unei probleme în dependenţă de mulţimea soluţiilor posibile.</b>  Toate soluţiile se identifică prin valori, ce aparţin tipurilor de date studiate: integer, boolean, enumerare, char, subdomeniu, tablouri unidimensionale. 
+                    Fie P o problemă, soluţia căreia se află printre elementele mulţimii S cu un număr finit de elemente. S={s1, s2 , s3 , ... , sn} . Soluţia se determină prin analiza fiecărui element si din mulţimea S. </p>
+                <p><b>SCHEMA GENERALĂ</b></p>
+                <div>
+                    <span>for i:=1 to k do </span><br>
+                    <span>(SolutiePosibila este o funcţie booleana care returneaza valoarea true dacă elementul si satisface condiţiile problemei şi false în caz contrar, iar PrelucrareaSolutiei este o procedură care efectuează prelucrarea elementului selectat. De obicei, în această procedură soluţia si este afişată la ecran.)</span>
+                    <span>Generarea soluţiilor posibile necesită elaborarea unor algoritmi speciali. În general,aceşti algoritmi realizează operaţiile legate de prelucrarea unor mulţimi:</span>
+                    <ul>
+                        <li>- reuniunea;</li>
+                        <li>- intersecţia;</li>
+                        <li>- diferenţa;</li>
+                        <li>- generarea tuturor submulţimilor;</li>
+                        <li>- generarea elementelor unui produs cartezian; </li>
+                        <li>- generarea permutărilor, aranjamentelor sau combinărilor de obiecte etc.</li>
+                    </ul>
+                    <p>Avantajul principal al algoritmilor bazaţi pe metoda trierii constă în faptul că programele respective sunt relativ simple, iar depanarea lor nu necesită teste sofisticate. Complexitatea temporală a acestor algorimi este determinată de numărul de elemente k din mulţimea soluţiilor posibile S. În majoritatea problemelor de o reală importanţă practică metoda trierii conduce la algoritmiii exponenţiali. Întrucît algoritmii exponenţiali sunt inacceptabili în cazul datelor de intrare foarte mari,metoda trierii este aplicată numai în scopuri didactice sau pentur elaborarea unor programe al căror timp de execuţie nu este critic.</p>
+                </div>
+                <p>Exemplu de problemă:</p>
+                <p>Se consideră numerele naturale din mulţimea {0, 1, 2, …, n}. Elaboraţi un program care determină pentru cîte numere K din această mulţime suma cifrelor fiecărui număr este egală cu m. În particular, pentru n=100 si m=2, în mulţimea{0, 1, 2, …, 100} există 3 numere care satisfac condiţiile problemei: 2, 11 si 20.Prin urmare, K=3.</p>
+                <p><b>Rezolvare:</b></p>
+                <ul>
+                    <li>Program Pex;</li>
+                    <li>Type Natural=0..MaxInt;</li>
+                    <li>Var I, k, m, n : Natural;</li>
+                    <li>Function SumaCifrelor(i:Natural): Natural;</li>
+                    <li>Var suma: Natural;</li>
+                    <li>Begin</li>
+                    <li>    Suma:=0;</li>
+                    <li>    Repeat</li>
+                    <li>        Suma:=suma+(I mod 10);</li>
+                    <li>        i:=i div 10;</li>
+                    <li>    until i=0;</li>
+                    <li>    SumaCifrelor:=suma;</li>
+                    <li>End;</li>
+                    <li>Function SolutiePosibila(i:Natural):Boolean;</li>
+                    <li>Begin</li>
+                    <li>    If SumaCifrelor(i)=m then SolutiaPosibila:=true</li>
+                    <li>        Else SolutiePosibila:=false;</li>
+                    <li>End;</li>
+                    <li>Procedure PrelucrareaSolutiei(i:Natural);</li>
+                    <li>Begin</li>
+                    <li>    Writeln(‘i=’, i);</li>
+                    <li>    K:=k+1;</li>
+                    <li>End;</li>
+                    <li>Begin</li>
+                    <li>    Write(‘Dati n=’); </li>
+                    <li>    readln(n);</li>
+                    <li>    Write(‘Dati m=’); </li>
+                    <li>    readln(m);</li>
+                    <li>    K:=0;</li>
+                    <li>    For i:=0 to n do</li>
+                    <li>        If SolutiePosibila(i) then PrelucrareaSolutiei(i);</li>
+                    <li>    Writeln(‘K=’, K);</li>
+                    <li>    Readln;</li>
+                    <li>End.</li>  
+                </ul><br>
+
+                <div class="com">
+                    <p><b>Comentarii</b></p>
+                    <textarea class="textar" type="text"  cols="100" rows="15" placeholder="Lasati un comentariu"></textarea>
+                    <button id="btn">Distribuiti
+                        <div id="list">
+                            <a href="https://www.facebook.com">Facebook</a>
+                            <a href="https://www.instagram.com">Instagram</a>
+                            <a href="https://www.twitter.com">Twitter</a>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            
+            <div class="metode">  
+                <div class="met1">
+                    <div><a href="t1.html" target="_blank"><h2>Metoda Greedy</h2></a></div>
+                    <span class="description">Este o metodă generală de elaborare a algoritmilor. În esenţă ea se aplică problemelor în care se dă o mulţime A conţinând n date de intrare cerându-se să se determine o submulţime B a sa care să îndeplinească anumite condiţii pentru a fi acceptată</span>
+                </div>
+                <div class="met2">
+                    <div><a href="t2.html" target="_blank"><h2>Metoda Trierii</h2></a></div>
+                    <span class="description">Se numeşte metoda trierii o metodă ce indentifică toate soluţiile unei probleme în dependenţă de mulţimea soluţiilor posibile</span>
+                </div>
+                <div class="met3">
+                    <div><a href="t3.html" target="_blank"><h2>Metoda Backtracking</h2></a></div>
+                    <span class="description">Backtracking este numele unui algoritm general de descoperire a tuturor soluțiilor unei probleme de calcul, algoritm ce se bazează pe construirea incrementală de soluții-candidat, abandonând fiecare candidat parțial imediat ce devine clar că acesta nu are șanse să devină o soluție validă</span>
+                </div>
+            </div> 
+            
+            <p><h3 class="autor">Realizat de </h3><h3 id="autor">D.Delia</h3></p>
+            
+        </div>
+        <link rel="stylesheet" href="css.css">
+        <script>
+            const button = document.getElementById('btn');
+            const list = document.getElementById('list');
+            list.style.display = 'none';
+            button.addEventListener('click',(e)=>{
+                if(list.style.display == 'none'){
+                    list.style.display = 'block'
+                }else{
+                    list.style.display = 'none'
+                }
+            })
+        </script>
+    </body>
+
+</html>

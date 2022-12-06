@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TEHNICI DE PROGRAMARE</title>
+        
+    </head>
+
+    <body>
+        <style>
+            body{
+                color: #FFE9D1;
+                text-align: center;
+                background: rgb(19,21,107);
+                background: linear-gradient(135deg, rgba(19,21,107,1) 0%, rgba(53,16,122,1) 28%, rgba(87,56,131,1) 94%);
+            }
+            .chenar{
+                border: 2px #ceb92c solid;
+                padding: 8px;
+                
+            }
+            fieldset{
+                border: 5px #ceb92c solid;
+                margin-bottom: 15px;
+            }
+            .autor{
+                font-family: Cursive ;
+                display:inline;
+            }
+            #autor{
+                font-family: 'Lucida Handwriting';
+                display:inline;
+            }
+            .song{
+                position: fixed;
+            }
+            .song :not(:hover){
+                opacity: .1;
+            }
+            img{
+                height: 25vh;
+            }
+            .input{
+                display: flex;
+                justify-content: right;
+                height: 25px;
+            }
+            input{
+                width: 20vw;
+                max-width: 25vw;
+            }
+            .metode{
+                display: flex;
+                flex-direction: row;
+                
+            }
+            .met1{
+                flex-basis: 33%;
+
+            }
+            .met2{
+                flex-basis: 33%;
+
+            }
+            .met3{
+                flex-basis: 33%;
+            }
+            .description{
+                visibility: hidden;
+                position: relative;
+                font-size: 25px;
+                opacity: 0;
+                transition: 1s ease-in-out;
+                
+            }
+            .met1:hover .description{
+                visibility: visible;
+                position: inherit; 
+                opacity: 1;              
+            }
+            .met2:hover .description{
+                visibility: visible;
+                position: inherit;
+                opacity: 1; 
+            }
+            .met3:hover .description{
+                visibility: visible;
+                position: inherit;
+                opacity: 1; 
+            }
+            legend,#logo,.metode a{
+                text-decoration: none;
+                color: #fff;
+            }
+            legend a{
+                text-decoration: none;
+                color: #fff;
+            }
+            .met1 div{
+                transition:all 2s ease;
+            }
+            .metode h2{
+                font-family: Papyrus;
+                font-size: 2em;
+            }
+            .tehnica{
+                font-size: 3.5em;
+                font-family: Papyrus;
+            }
+            .tehDesc{
+                font-size: 1.5em;
+                text-align: left;
+            }
+            .prob li{
+                list-style-type: none;
+            }
+            .textar{
+                border-radius: 10px;
+                background-color: #dbdddd;
+                font-size: .9em;
+            }
+            button{
+                position: absolute;
+                border-radius: 5px;
+                background-color: #dbdddd;
+                font-size: 1em;
+                text-align: center;
+                margin-left: 10px;
+            }
+            #list{
+                list-style-type: none;
+                display: inline-block;
+            }
+            #list li a{
+                text-decoration: none;
+                color: black;
+            }
+
+
+        </style>
+        <div class="chenar">
+            
+            <fieldset><legend><a href="index.html"><h1>TEHNICI DE PROGRAMARE</h1></a></legend>
+            
+            <div class="input">
+                <input type="text" placeholder="Cauta">
+            </div><br>
+
+            <div id="logo">
+                <a href="https://ro.m.wikipedia.org/wiki/C%2B%2B"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++"></a>
+            </div>
+
+            <div class="song">
+                <audio controls>
+                    <source src="song.mp3" type="audio/mpeg">
+                    </audio>
+            </div>
+
+            <p class="tehnica">Metoda Backtracking</p>
+
+            <div class="tehDesc">
+                <p>Backtracking este numele unui algoritm general de descoperire a tuturor soluțiilor unei probleme de calcul, algoritm ce se bazează pe construirea incrementală de soluții-candidat, abandonând fiecare candidat parțial imediat ce devine clar că acesta nu are șanse să devină o soluție validă.</p>
+                <p>Exemplul de bază folosit în numeroase manuale de liceu și de nivel universitar este problema reginelor, care cere să se găsească toate modurile în care pot fi așezate pe o tablă de șah opt regine astfel încât să nu se atace. În abordarea backtracking, candidatele parțiale sunt aranjamente de câte k regine pe primele k rânduri ale tablei, toate pe rânduri și coloane diferite. Orice soluție parțială ce conține două regine care se atacă poate fi abandonată, deoarece în mod clar restul de regine nu pot fi așezate într-o soluție validă.</p>
+                <p>Tehnica backtracking se poate aplica doar pentru probleme ce admit conceptul de „candidat parțial de soluție” și oferă un test relativ rapid asupra posibilității ca un astfel de candidat să fie completat către o soluție validă. Când se poate aplica, însă, backtrackingul este adesea mult mai rapid decât căutarea prin metoda forței brute prin toți candidații, întrucât este capabilă să elimine dintr-un singur test un mare număr de candidați.</p>
+                <p>Backtrackingul este util la rezolvarea unor probleme de satisfacere a constrângerilor, cum ar fi cuvintele încrucișate, jocuri de sudoku și alte probleme similare. Ea stă la baza unei serii de limbaje de programare logică, cum ar fi Icon, Planner și Prolog.</p>
+                <p><b>Termenul „backtrack” a fost inventat de matematicianul american D. H. Lehmer în anii 1950.</b></p>
+                
+                <div class="prob">
+                    <p>Exemplu de problemă:</p>
+                    <p>Se dă un număr natural s cu cel mult 9 cifre. Afișaţi, în ordine lexicografică, toate modalităţile de a-l scrie pe s ca produs de divizori proprii distincți ai lui s. 
+                        Exemplu: 
+                        30 poate fi scris in următoarele moduri:
+                            <ul>
+                                <li>2 3 5</li> 
+                                <li>2 15</li>
+                                <li>3 10</li>
+                                <li>5 6</li>
+                            </ul> 
+                        </p>
+                    <p><b>Rezolvare:</b></p>
+                    <pre style="word-wrap: break-word; white-space: pre-wrap;">
+    #include &lt;iostream&gt;
+    #include &lt;algorithm&gt;
+    using namespace std;
+                            
+    int D[401],X[401],n;
+    unsigned long long s;
+                            
+    void afisare(int k)
+    {
+        for(int i=1;i&lt;=k;i++)
+            cout&lt;&lt;D[X[i]]&lt;&lt;" ";
+        cout&lt;&lt;"\n";
+    }
+                            
+    void back(int k, unsigned long long pp)
+    {
+        for(int i=X[k-1]+1;i&lt;=n &amp;&amp; pp*D[i]&lt;=s;i++)
+        {
+            X[k]=i;
+            pp=pp*D[X[k]];
+            if(pp&lt;=s)
+                if(pp==s) afisare(k);
+                else back(k+1,pp);
+            pp=pp/D[X[k]];
+        }
+    }
+                            
+    int main()
+    {
+        cin&gt;&gt;s;
+        for(unsigned long long i=2;i*i&lt;=s;i++)
+            if(s%i==0)
+            {
+                D[++n]=i;
+                if(i*i!=s)  D[++n]=s/i;
+            }
+        if(n==0) cout&lt;&lt;"NU EXISTA";
+        else
+        {
+            sort(D+1,D+n+1);
+            back(1,1);
+        }
+        return 0;
+    }                        
+                    </pre>
+                </div><br>
+
+                <div class="com">
+                    <p><b>Comentarii</b></p>
+                    <textarea class="textar" type="text"  cols="100" rows="15" placeholder="Lasati un comentariu"></textarea>
+                    <button id="btn">Distribuiti
+                        <div id="list">
+                            <a href="https://www.facebook.com">Facebook</a>
+                            <a href="https://www.instagram.com">Instagram</a>
+                            <a href="https://www.twitter.com">Twitter</a>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            
+            <div class="metode">  
+                <div class="met1">
+                    <div><a href="t1.html" target="_blank"><h2>Metoda Greedy</h2></a></div>
+                    <span class="description">Este o metodă generală de elaborare a algoritmilor. În esenţă ea se aplică problemelor în care se dă o mulţime A conţinând n date de intrare cerându-se să se determine o submulţime B a sa care să îndeplinească anumite condiţii pentru a fi acceptată</span>
+                </div>
+                <div class="met2">
+                    <div><a href="t2.html" target="_blank"><h2>Metoda Trierii</h2></a></div>
+                    <span class="description">Se numeşte metoda trierii o metodă ce indentifică toate soluţiile unei probleme în dependenţă de mulţimea soluţiilor posibile</span>
+                </div>
+                <div class="met3">
+                    <div><a href="t3.html" target="_blank"><h2>Metoda Backtracking</h2></a></div>
+                    <span class="description">Backtracking este numele unui algoritm general de descoperire a tuturor soluțiilor unei probleme de calcul, algoritm ce se bazează pe construirea incrementală de soluții-candidat, abandonând fiecare candidat parțial imediat ce devine clar că acesta nu are șanse să devină o soluție validă</span>
+                </div>
+            </div> 
+            
+            <p><h3 class="autor">Realizat de </h3><h3 id="autor">D.Delia</h3></p>
+            
+        </div>
+        <link rel="stylesheet" href="css.css">
+        <script>
+            const button = document.getElementById('btn');
+            const list = document.getElementById('list');
+            list.style.display = 'none';
+            button.addEventListener('click',(e)=>{
+                if(list.style.display == 'none'){
+                    list.style.display = 'block'
+                }else{
+                    list.style.display = 'none'
+                }
+            })
+        </script>
+    </body>
+
+</html>
